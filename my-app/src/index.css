@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.auth-comp{
+  color: purple
+}
+.img-1{
+  margin-right:0px ;
+}
+
+.rowC{display:flex; flex-direction:row;}
