@@ -7,7 +7,7 @@ class BDImageRender extends React.Component {
   render() {
 
     return (
-      <div className="img-1" style={{display: 'flex', justifyContent: 'center', marginTop: '2rem', marginBottom: '2rem'}}>
+      <div className="img-1" style={{justifyContent: 'center', marginTop: '2rem', marginBottom: '2rem'}}>
         <Container
           shadow="3"
           border={{ b: "3px solid" }}
@@ -20,7 +20,7 @@ class BDImageRender extends React.Component {
                 <br />
                 <Image
                   shadow="3"
-                  width="50%"
+                  width="70%"
                   border={{ b: "3px solid" }}
                   borderColor="gray400"
                   m={{ r: "2rem" }}
