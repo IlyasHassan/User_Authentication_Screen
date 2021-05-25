@@ -104,7 +104,7 @@ class Authentification extends React.Component {
                 src={GoogleLogo}
                 />
 
-                &nbsp;Continue with google
+                &nbsp;Continue with Google
             </Button>
 
             <label className="OrSignUpText">
