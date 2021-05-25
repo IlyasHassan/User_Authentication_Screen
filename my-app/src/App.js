@@ -10,9 +10,7 @@ function App() {
   return (
     <BrowserRouter>
     <div className="App">
-      <Navbar>
-       
-      </Navbar>
+     
     </div>
 
 
@@ -21,7 +19,7 @@ function App() {
           
 
   
-  <FirstPageRow
+  <FirstPageRow style={{justifyContent: 'left'}}
   />
 
   

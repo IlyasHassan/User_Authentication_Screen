@@ -7,17 +7,15 @@ import Grid from '@material-ui/core/Grid';
 function ContainerRow() {
 
     return (
-        <div className='rowC' display = 'flex' flex-direction ='row'>
+        <Container>
+        <div className='rowC' >
        
-               
+       
                 <BDImageRender />
-                
                 <Authentification />
-                
-          
   
         </div>
-        
+        </Container>
     );
     }
  

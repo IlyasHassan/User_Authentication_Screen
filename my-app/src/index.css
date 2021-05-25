@@ -3,6 +3,7 @@ body {
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
@@ -10,10 +11,21 @@ code {
 }
 
 .auth-comp{
-  color: purple
+  justify-content: left;
+  float: 'left';
+  padding-right: 100px;
+  width: 600px;
+
+ 
 }
 .img-1{
   margin-right:0px ;
 }
 
 .rowC{display:flex; flex-direction:row;}
+
+form{
+justify-content: left;
+
+}
+
