@@ -10,10 +10,12 @@ class Authentification extends React.Component {
         super(props);
         this.state = {
           isChecked: false,
-          
-        };
+          email: "email",
+          password: "password"
+        }
+    
     }
-
+    
     handleInputChange = (event) =>{
         const target = event.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
@@ -23,9 +25,33 @@ class Authentification extends React.Component {
             [name]: value
         })
     }
+    handleOnChange = (email, password) => {
+        const additionalText = "Please Enter Email and Password";
+        let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    
+        if( re.test(email)){
+            additionalText="Email Has Passes Validation";
+
+        } else if (email == null) {
+             additionaltext = "Email Field Cannot be empty"
+
+
+        } else if (password == null){
+            additionalText = "Password Field Cannot be Empty"
+
+        } else if (password == null && email == null){
+            additionalText = "Email and Password Fields Cannot be Empty"
+
+        } else{
+
+            additionalText= "This email is invalid";
+            
+        }
+    
+    }
+
 
     render(){
-
         return (  
         <div className="auth-comp" >  
           <Container
@@ -75,16 +101,17 @@ class Authentification extends React.Component {
             or sign up with email
         </label>
     <Text>Email</Text>
+
 <form>
   <label>
-    <input type="text" name="name" />
+    <input type="email" value={email} onChange={this.state.email = email} />
   </label>
-
 </form>
+
 <p>Password (min. 8 characters)</p>
 <form>
 <label>
-    <input type="text" name="name" />
+    <input type="text" value={password} onChange={this.state.password = password} />
   </label>
 
 </form>
@@ -113,19 +140,21 @@ class Authentification extends React.Component {
       hoverBg="info200"
       border="1px solid"
       borderColor="info700"
+      onClick={this.handleOnChange(this.state.email, this.state.password)}
       hoverBorderColor="info900"
     >
       Get Started
     </Button>
-
+<br></br>
+{this.additionalText}
             
           </Container>
         </div>
     );
 
-        }
     }
-
+    
+}
 
 
 export default Authentification;

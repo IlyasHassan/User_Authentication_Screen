@@ -21,7 +21,7 @@ class BDImageRender extends React.Component {
                 <Image
                   shadow="3"
                   width="80%"
-                  height= '600px'
+                  height= '80%'
                   border={{ b: "3px solid" }}
                   borderColor="gray400"
                   m={{ r: "2rem" }}
