@@ -37,6 +37,7 @@ justify-content: left;
 }
 .GetStartBTN{
   width:100%;
+  background-color: #F63E34;
 }
 .UnderlinedRed{
   font-style: underline ;

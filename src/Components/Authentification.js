@@ -156,7 +156,7 @@ class Authentification extends React.Component {
         textColor="white"
         justifyContent='right'
         hoverTextColor="info900"
-        bg="white"
+        bg="#F63E34"
         hoverBg="info200"
         border="1px solid"
         borderColor="info700"
