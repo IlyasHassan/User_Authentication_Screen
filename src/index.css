@@ -38,6 +38,8 @@ justify-content: left;
 .GetStartBTN{
   width:100%;
   background-color: #F63E34;
+  border-color: #F63E34;
+  color: white
 }
 .UnderlinedRed{
   font-style: underline ;
