@@ -1,7 +1,7 @@
 {
-  "homepage": "http://ilyashassan.github.io/my-app",
   "name": "my-app",
   "version": "0.1.0",
+  "homepage": "https://ilyashassan.github.io/User_Authentication_Screen/",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.4",
