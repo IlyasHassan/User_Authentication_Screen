@@ -10,8 +10,8 @@ class Authentification extends React.Component {
         super(props);
         this.state = {
           isChecked: false,
-          email: "email",
-          password: "password"
+          email: null,
+          password: null
         }
     
     }
@@ -26,27 +26,39 @@ class Authentification extends React.Component {
         })
     }
     handleOnChange = (email, password) => {
-        const additionalText = "Please Enter Email and Password";
+
+        var additionalText = ""
+     
         let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     
         if( re.test(email)){
-            additionalText="Email Has Passes Validation";
+            console.log("Email is correct");
+            additionalText = "Email is correct"
 
-        } else if (email == null) {
-             additionaltext = "Email Field Cannot be empty"
+        } else if (email == "") {
+            console.log("Email Cannot Be Empty");
+            additionalText = "Email Cannot Be Empty"
 
 
-        } else if (password == null){
-            additionalText = "Password Field Cannot be Empty"
+        } else if (password == ""){
+            console.log("Password Cannot be Empty");
+            additionalText = "Password Cannot be Empty"
 
         } else if (password == null && email == null){
-            additionalText = "Email and Password Fields Cannot be Empty"
+            console.log("Email and Password Cannot Be Empty");
+            additionalText = "Email and Password Cannot Be Empty"
 
         } else{
+            console.log("Email is incorrect");
+            additionalText = "Email is incorrect"
 
-            additionalText= "This email is invalid";
-            
         }
+        return(
+            <div>
+            {additionalText}
+            </div>
+           
+        )
     
     }
 
@@ -104,14 +116,14 @@ class Authentification extends React.Component {
 
 <form>
   <label>
-    <input type="email" value={email} onChange={this.state.email = email} />
+    <input type="email" value={this.state.email} onChange={this.handleOnChange} />
   </label>
 </form>
 
 <p>Password (min. 8 characters)</p>
 <form>
 <label>
-    <input type="text" value={password} onChange={this.state.password = password} />
+    <input type="text" value={this.state.password} onChange={this.handleOnChange} />
   </label>
 
 </form>
