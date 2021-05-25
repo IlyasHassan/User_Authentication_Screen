@@ -37,16 +37,17 @@ class Authentification extends React.Component {
           
           <Text className="SignInText" style={{fontWeight: "bold"}}> Sign up to begin your adventure</Text>
 
-          <t style={{fontSize: "small"}}>Already a member? Login instead</t>
-          <Button
+          <t style={{fontSize: "small"}}>Already a member? <t className="UnderlinedRed">Login instead</t></t>
+          <Button className="ContinueButton"
       h="4rem"
       w="90%"
+      height="10%"
       m={{ x: "1.75rem" }}
       p={{ x: "1.75rem" }}
       textSize="body"
       textColor="info700"
       hoverTextColor="info900"
-      bg="white"
+      bgc="white"
       hoverBg="info200"
       border="1px solid"
       borderColor="info700"
@@ -59,28 +60,21 @@ class Authentification extends React.Component {
         border={{ b: "3px solid" }}
         borderColor="gray400"
         m={{ r: "2rem" }}
+        bg='white'
         rounded="xl"
         src={GoogleLogo}
         />
          &nbsp;Continue with google
     </Button>
-    <Button
-      h="4rem"
-      w="90%"
-      m={{ x: "1.75rem" }}
-      p={{ x: "1.75rem" }}
-      textSize="body"
-      textColor="info700"
-      hoverTextColor="info900"
-      bg="white"
-      hoverBg="info200"
-      border="1px solid"
-      borderColor="info700"
-      hoverBorderColor="info900"
-    >
-      or sign up with email
-    </Button>
-    <p>Email</p>
+    <label className="OrSignUpText">
+          <input className="OrSignUpText"
+            type="checkbox"
+            checked={this.state.isChecked}
+            onChange={this.handleInputChange} 
+            />
+            or sign up with email
+        </label>
+    <Text>Email</Text>
 <form>
   <label>
     <input type="text" name="name" />
@@ -102,16 +96,17 @@ class Authentification extends React.Component {
             checked={this.state.isChecked}
             onChange={this.handleInputChange} 
             />
-            I agree to the Terms of Service and Privacy Policy
+            I agree to the <t className="UnderlinedRed" >Terms of Service </t> and <t className="UnderlinedRed">Privacy Policy</t>
         </label>
 </form>
-<Button
+<Button className="GetStartBTN"
       h="4rem"
       w="90%"
+      width="100%"
       m={{ x: "1.75rem" }}
       p={{ x: "1.75rem" }}
       textSize="body"
-      textColor="info700"
+      textColor="white"
       justifyContent='right'
       hoverTextColor="info900"
       bg="white"

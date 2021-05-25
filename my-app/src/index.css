@@ -15,17 +15,31 @@ code {
   float: 'left';
   padding-right: 100px;
   width: 600px;
+  padding-top:100px;
 
  
 }
-.img-1{
-  margin-right:0px ;
-}
+
 
 .rowC{display:flex; flex-direction:row;}
 
 form{
 justify-content: left;
 
+}
+.OrSignUpText{
+  padding-left: 68px;
+  margin-top: 120px;
+}
+.ContinueButton{
+  margin-top: 15px;
+}
+.GetStartBTN{
+  width:100%;
+}
+.UnderlinedRed{
+  font-style: underline ;
+  color: #F63E34
+  
 }
 
